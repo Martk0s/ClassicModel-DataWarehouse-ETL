@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MARTKOS-PC"
   DTS:CreatorName="MARTKOS-PC\Martkos"
-  DTS:DTSID="{A4A30800-613B-4A7A-B9BB-9268A758073D}"
+  DTS:DTSID="{86B02384-2148-4934-A33C-B11D27BD8777}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.132"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Load_DimProducts"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{88245B7A-3D43-4E47-A1F0-1BB307975F2F}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F9AD0928-18AA-48E6-8128-A639ABBC1C2E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{9D37BF5D-CF6D-4D76-9172-38536068AF49}"
+      DTS:DTSID="{670C2ABE-2C23-44D9-8EB2-59C93D585013}"
       DTS:ObjectName="10.0.15.15.ClassicModels.std2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC7Bp6oZPjcSwkSsWPvHCLuaLc2oswVUO7my1LdMFV7WgAAAAAOgAAAAAIAACAAAADum1QJHSaByGfyTRNb+k8UmSlMPQxR2Edw8JvowVNCbiAAAABHe2lEwKNVfOgUQFjv+2B8RS/nAcE+kiezh1i7qaoVKUAAAAD32u8SGhYn1A1pQQ8BMwA04+dEfdxW1DDTBb0yzGtKVPxYBZwyOpUxyeJRAGxyn81MPifqRrF1s7UWSJnlThTe</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACpG1QC/3ZJE22aUz4diVrLNGzDXdTLsnejx2pLlkeh2QAAAAAOgAAAAAIAACAAAAAXZsyxCJ52nEF1UmSab+LiJGUz2Nj3gGt9vA8788SdsyAAAABi+yZCkZBL7x83ICKCnw6HBEfqrEhzPz8hcKWeNwVEcUAAAABm7optmZs4JCoaNRgPkGhrUQLqZjJPV+G9es13Z3an5VTImEj6Tc2W9J+RU4ZQNaT2aGxn3B8vjNwc/4ubv7fD</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -35,13 +35,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Load DimProducts"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{E83DFFFD-5666-4856-9F06-C3A5946788DD}"
+      DTS:DTSID="{89C7F9C3-A526-47C7-BDE9-AA028A13C605}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Load DimProducts"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -49,7 +49,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Load DimProducts\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -64,7 +64,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DimEmployees]</property>
+                  name="OpenRowset">[dbo].[DimProducts]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -106,7 +106,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Load DimProducts\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   description="The OLE DB runtime connection used to access the database."
@@ -114,92 +114,106 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[employeeNumber]"
-                      cachedDataType="r8"
-                      cachedName="employeeNumber"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employeeNumber]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[employeeNumber]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lastName]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productCode]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="lastName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lastName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[lastName]" />
+                      cachedName="productCode"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productCode]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[firstName]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productName]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="firstName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[firstName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[firstName]" />
+                      cachedName="productName"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productName]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobTitle]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productLine]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="jobTitle"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobTitle]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobTitle]" />
+                      cachedName="productLine"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productLine]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productLine]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[reportsTo]"
-                      cachedDataType="r8"
-                      cachedName="reportsTo"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reportTo]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[reportsTo]" />
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productScale]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productScale"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productScale]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productScale]" />
+                    <inputColumn
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productVendor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="productVendor"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productVendor]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productVendor]" />
+                    <inputColumn
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productDescription]"
+                      cachedDataType="nText"
+                      cachedName="productDescription"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productDescription]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productDescription]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employeeNumber]"
-                      dataType="i4"
-                      name="employeeNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lastName]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productCode]"
                       dataType="wstr"
                       length="255"
-                      name="lastName" />
+                      name="productCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[firstName]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productName]"
                       dataType="wstr"
                       length="255"
-                      name="firstName" />
+                      name="productName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobTitle]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productLine]"
                       dataType="wstr"
                       length="255"
-                      name="jobTitle" />
+                      name="productLine" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reportTo]"
-                      dataType="i4"
-                      name="reportTo" />
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productScale]"
+                      dataType="wstr"
+                      length="255"
+                      name="productScale" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productVendor]"
+                      dataType="wstr"
+                      length="255"
+                      name="productVendor" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productDescription]"
+                      dataType="nText"
+                      name="productDescription" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load DimProducts\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimProducts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimProducts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimProducts\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -208,7 +222,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\Load DimProducts\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -223,7 +237,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[.employees]</property>
+                  name="OpenRowset">[dbo].[.products]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -257,7 +271,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Load DimProducts\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   description="The OLE DB runtime connection used to access the database."
@@ -265,191 +279,206 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[employeeNumber]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productCode]"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productCode]"
+                      name="productCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productName]"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productName]"
+                      name="productName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productLine]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productLine]"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productLine]"
+                      name="productLine"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productScale]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productScale]"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productScale]"
+                      name="productScale"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productVendor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productVendor]"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productVendor]"
+                      name="productVendor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productDescription]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productDescription]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productDescription]"
+                      name="productDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantityInStock]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[employeeNumber]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[employeeNumber]"
-                      name="employeeNumber"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantityInStock]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantityInStock]"
+                      name="quantityInStock"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[lastName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lastName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[lastName]"
-                      name="lastName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[firstName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[firstName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[firstName]"
-                      name="firstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[extension]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[extension]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[extension]"
-                      name="extension"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[email]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[email]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[email]"
-                      name="email"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[officeCode]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[officeCode]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[officeCode]"
-                      name="officeCode"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[reportsTo]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[buyPrice]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[reportsTo]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[reportsTo]"
-                      name="reportsTo"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[buyPrice]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[buyPrice]"
+                      name="buyPrice"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobTitle]"
-                      dataType="wstr"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobTitle]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobTitle]"
-                      name="jobTitle"
+                      externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MSRP]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[MSRP]"
+                      name="MSRP"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[employeeNumber]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="productCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productName]"
+                      dataType="wstr"
+                      length="255"
+                      name="productName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productLine]"
+                      dataType="wstr"
+                      length="255"
+                      name="productLine" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productScale]"
+                      dataType="wstr"
+                      length="255"
+                      name="productScale" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productVendor]"
+                      dataType="wstr"
+                      length="255"
+                      name="productVendor" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productDescription]"
+                      dataType="nText"
+                      name="productDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantityInStock]"
                       dataType="r8"
-                      name="employeeNumber" />
+                      name="quantityInStock" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lastName]"
-                      dataType="wstr"
-                      length="255"
-                      name="lastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[firstName]"
-                      dataType="wstr"
-                      length="255"
-                      name="firstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[extension]"
-                      dataType="wstr"
-                      length="255"
-                      name="extension" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[email]"
-                      dataType="wstr"
-                      length="255"
-                      name="email" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[officeCode]"
-                      dataType="wstr"
-                      length="255"
-                      name="officeCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[reportsTo]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[buyPrice]"
                       dataType="r8"
-                      name="reportsTo" />
+                      name="buyPrice" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobTitle]"
-                      dataType="wstr"
-                      length="255"
-                      name="jobTitle" />
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MSRP]"
+                      dataType="r8"
+                      name="MSRP" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[employeeNumber]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productCode]"
+                      name="productCode" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productName]"
+                      name="productName" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productLine]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productLine]"
+                      name="productLine" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productScale]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productScale]"
+                      name="productScale" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productVendor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productVendor]"
+                      name="productVendor" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productDescription]"
+                      dataType="nText"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productDescription]"
+                      name="productDescription" />
+                    <outputColumn
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantityInStock]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[employeeNumber]"
-                      name="employeeNumber" />
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantityInStock]"
+                      name="quantityInStock" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lastName]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lastName]"
-                      name="lastName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[firstName]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[firstName]"
-                      name="firstName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[extension]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[extension]"
-                      name="extension" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[email]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[email]"
-                      name="email" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[officeCode]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[officeCode]"
-                      name="officeCode" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[reportsTo]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[buyPrice]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[reportsTo]"
-                      name="reportsTo" />
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[buyPrice]"
+                      name="buyPrice" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobTitle]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobTitle]"
-                      name="jobTitle" />
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MSRP]"
+                      dataType="r8"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MSRP]"
+                      name="MSRP" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -460,10 +489,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Load DimProducts.Paths[OLE DB Source Output]"
+              endId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -482,27 +511,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
+          Size="169,42"
+          Id="Package\Load DimProducts"
           TopLeft="5.5,5.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Load DimProducts">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="0.5,0.5" />
-        <NodeLayout
           Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
+          Id="Package\Load DimProducts\OLE DB Destination"
           TopLeft="52.5,128.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Load DimProducts\OLE DB Source"
+          TopLeft="0.5,0.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          Id="Package\Load DimProducts.Paths[OLE DB Source Output]"
           TopLeft="79,42.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -539,7 +568,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Load DimProducts\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -552,7 +581,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Load DimProducts\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

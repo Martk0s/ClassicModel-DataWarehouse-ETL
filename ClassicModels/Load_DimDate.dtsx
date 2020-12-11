@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/10/2020 2:56:41 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MARTKOS-PC"
+  DTS:CreatorName="MARTKOS-PC\Martkos"
+  DTS:DTSID="{E8471FCD-291D-422C-BBCF-845556E22363}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{3C9D00C6-C069-4733-BB73-E74185009B4E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5716F9B2-C315-450A-8938-25DB527FE70E}"
+      DTS:ObjectName="10.0.15.15.ClassicModels.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModels;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZFKYQLxUlKiswZ/JDDR/9xH6Na8cDILNRFnQx7FVreAAAAAAOgAAAAAIAACAAAAC/GwgZN5BG+qXVCUOb/zOrhoQv5+nq4Cq39qXaznOJNiAAAAD9ttBwtU/dglNay1/Q7J5yuhpbB/5UNfi1e3NEVCp0q0AAAAAeWbx7ijEeC3QAUAOev2Eu2bNzbVfON1og+tp98q5ron811+bgZ/OPxC+0TBfnVtRw6sVsTXcH5aozcCC8RHn8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Generate calendar 2003_01_01 to 2005_12_31"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B148A450-9EDA-4D06-9791-0C70AAAFD926}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Generate calendar 2003_01_01 to 2005_12_31"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5716F9B2-C315-450A-8938-25DB527FE70E}"
+          SQLTask:SqlStatementSource="Declare @todate datetime,&#xA;        @fromdate datetime&#xA;set @fromdate = '2003-01-01'&#xA;set @todate = '2005-12-31'&#xA;&#xA;;With DateSequence( [Date] ) as&#xA;(&#xA;    Select @fromdate as [Date]&#xA;        union all&#xA;    Select dateadd(day, 1, [Date])&#xA;        from DateSequence&#xA;        where Date &lt; @todate&#xA;)&#xA;insert into DimDate&#xA;Select&#xA;    CONVERT(VARCHAR,[Date],112) as ID,&#xA;    [Date] as [Date],&#xA;    DATEPART(DAY,[Date]) as [Day],   &#xA;    DATENAME(dw, [Date]) as [DayOfWeek],&#xA;    DATEPART(DAYOFYEAR,[Date]) as [DayOfYear],&#xA;    DATEPART(WEEK,[Date]) as [WeekOfYear],&#xA;                DATEPART(WEEK,[Date]) +&#xA;                1 - DATEPART(WEEK,CAST(DATEPART(MONTH,[Date]) AS VARCHAR)&#xA;                + '/1/' + CAST(DATEPART(YEAR,[Date]) AS VARCHAR)) as [WeekOfMonth],&#xA;    DATEPART(MONTH,[Date]) as [Month],&#xA;    DATENAME(MONTH,[Date]) as [MonthName],&#xA;    DATEPART(QUARTER,[Date]) as [Quarter],   &#xA;    DATEPART(YEAR,[Date]) as [Year]&#xA;from DateSequence option (MaxRecursion 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="310,42"
+          Id="Package\Generate calendar 2003_01_01 to 2005_12_31"
+          TopLeft="35.5,35.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

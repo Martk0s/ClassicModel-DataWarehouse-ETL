@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MARTKOS-PC"
   DTS:CreatorName="MARTKOS-PC\Martkos"
-  DTS:DTSID="{42A48E3A-6507-4735-96E9-4A1B784F5991}"
+  DTS:DTSID="{4A4E1DE6-8B8B-4833-98AC-3E224BCAC05F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.132"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Load_DimCustomers"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{99499958-7D3C-4F73-BAAC-2B4032BEEBD4}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{4025C4C1-6F60-4123-9958-07CB6C5E612B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJL2F77+Bf6Y6avHstsyYh4utpckMxtPx/Z04b8gat5QAAAAAOgAAAAAIAACAAAADfNLPwURyBnUzMKbg8diZRWYFwUwPziuntuggSCr+FBCAAAADtD9z1vBUBBz6nrKLXnEs6Ix+HSuztE9S0ERQKKbpRgUAAAAAO2BT+FXvoxQEv8OT1qwXUopz8aLPgrpvLrAyju3xgbG8iSXNKOG27Dqj1Rq0+e2pFL0oz/5Rp+n1Vth8pLV8N</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADUTblkyiGXYoL3azqJLK1WjrEgBdCDX5iyYgu6MZJGzAAAAAAOgAAAAAIAACAAAADJVx9IQO+pBd2pn6a1ZByEM5AqEqCeNIH9uo+0jpt+FiAAAACO5c4pwc1IG1+0ir1l6X9O0aBemg2FnjaVxqNj1ZuF40AAAADHBVcQ/9uGWrxMuTseSzeg0BCKkcCFYgAOXkJUIIFGAYU5LjiIGu7/XCttcMzxktf7F1G4zPs6M4VowBwX8S/B</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -55,13 +55,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Load DimCustomers"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{DFFDA5F2-2FF3-412F-8FC8-5E0E6F8FF267}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Load DimCustomers"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -69,7 +69,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Load DimCustomers\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -126,7 +126,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Load DimCustomers\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   description="The OLE DB runtime connection used to access the database."
@@ -134,58 +134,58 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerNumber]"
                       cachedDataType="r8"
                       cachedName="customerNumber"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerNumber]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]" />
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerNumber]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customerName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="customerName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]" />
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[contactLastName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[contactLastName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="contactLastName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactLastName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]" />
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactLastName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[contactFirstName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[contactFirstName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="contactFirstName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactFirstName]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]" />
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactFirstName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerNumber]"
                       dataType="i4"
                       name="customerNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customerName]"
                       dataType="wstr"
                       length="255"
                       name="customerName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactLastName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactLastName]"
                       dataType="wstr"
                       length="255"
                       name="contactLastName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactFirstName]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[contactFirstName]"
                       dataType="wstr"
                       length="255"
                       name="contactFirstName" />
@@ -194,22 +194,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load DimCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimCustomers\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -218,7 +218,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Source"
+              refId="Package\Load DimCustomers\OLE DB Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -267,7 +267,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Load DimCustomers\OLE DB Source.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
                   description="The OLE DB runtime connection used to access the database."
@@ -275,293 +275,293 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerNumber]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerNumber]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerNumber]"
                       name="customerNumber"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerName]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerName]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[customerName]"
                       name="customerName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactLastName]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactLastName]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactLastName]"
                       name="contactLastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactFirstName]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactFirstName]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[contactFirstName]"
                       name="contactFirstName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[phone]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[phone]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[phone]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[phone]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[phone]"
                       name="phone"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine1]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine1]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine1]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine1]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine1]"
                       name="addressLine1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine2]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine2]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine2]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine2]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[addressLine2]"
                       name="addressLine2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[state]"
                       name="state"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[postalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[postalCode]"
                       name="postalCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[country]"
                       name="country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[salesRepEmployeeNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[salesRepEmployeeNumber]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[salesRepEmployeeNumber]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[salesRepEmployeeNumber]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[salesRepEmployeeNumber]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[salesRepEmployeeNumber]"
                       name="salesRepEmployeeNumber"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[creditLimit]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[creditLimit]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[creditLimit]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[creditLimit]"
+                      externalMetadataColumnId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[creditLimit]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].Columns[creditLimit]"
                       name="creditLimit"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerNumber]"
                       dataType="r8"
                       name="customerNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerName]"
                       dataType="wstr"
                       length="255"
                       name="customerName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactLastName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactLastName]"
                       dataType="wstr"
                       length="255"
                       name="contactLastName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactFirstName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[contactFirstName]"
                       dataType="wstr"
                       length="255"
                       name="contactFirstName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[phone]"
                       dataType="wstr"
                       length="255"
                       name="phone" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine1]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine1]"
                       dataType="wstr"
                       length="255"
                       name="addressLine1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine2]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[addressLine2]"
                       dataType="wstr"
                       length="255"
                       name="addressLine2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[city]"
                       dataType="wstr"
                       length="255"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[state]"
                       dataType="wstr"
                       length="255"
                       name="state" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
                       dataType="wstr"
                       length="255"
                       name="postalCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
                       dataType="wstr"
                       length="255"
                       name="country" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[salesRepEmployeeNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[salesRepEmployeeNumber]"
                       dataType="r8"
                       name="salesRepEmployeeNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[creditLimit]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[creditLimit]"
                       dataType="r8"
                       name="creditLimit" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
                       name="customerNumber" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerName]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerName]"
                       name="customerName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactLastName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactLastName]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactLastName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactLastName]"
                       name="contactLastName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactFirstName]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactFirstName]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactFirstName]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[contactFirstName]"
                       name="contactFirstName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[phone]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[phone]"
                       name="phone" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine1]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine1]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine1]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine1]"
                       name="addressLine1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine2]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine2]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine2]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[addressLine2]"
                       name="addressLine2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[city]"
                       name="city" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[state]"
                       name="state" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
                       name="postalCode" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country]"
                       name="country" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
                       name="salesRepEmployeeNumber" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[creditLimit]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[creditLimit]"
                       dataType="r8"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[creditLimit]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[creditLimit]"
                       name="creditLimit" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -572,10 +572,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Load DimCustomers.Paths[OLE DB Source Output]"
+              endId="Package\Load DimCustomers\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -594,27 +594,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
+          Size="179,42"
+          Id="Package\Load DimCustomers"
           TopLeft="5.5,5.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Load DimCustomers">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157,42"
-          Id="Package\Data Flow Task\OLE DB Source"
+          Id="Package\Load DimCustomers\OLE DB Source"
           TopLeft="5.5,5.5" />
         <NodeLayout
           Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
+          Id="Package\Load DimCustomers\OLE DB Destination"
           TopLeft="28.5,114.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          Id="Package\Load DimCustomers.Paths[OLE DB Source Output]"
           TopLeft="84,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -651,7 +651,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Load DimCustomers\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -664,7 +664,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Load DimCustomers\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
