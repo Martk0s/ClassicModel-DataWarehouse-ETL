@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DimCustomers"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{4025C4C1-6F60-4123-9958-07CB6C5E612B}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{BC1179AA-0F36-4AFD-AFC5-ABA8E6380A31}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,37 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADUTblkyiGXYoL3azqJLK1WjrEgBdCDX5iyYgu6MZJGzAAAAAAOgAAAAAIAACAAAADJVx9IQO+pBd2pn6a1ZByEM5AqEqCeNIH9uo+0jpt+FiAAAACO5c4pwc1IG1+0ir1l6X9O0aBemg2FnjaVxqNj1ZuF40AAAADHBVcQ/9uGWrxMuTseSzeg0BCKkcCFYgAOXkJUIIFGAYU5LjiIGu7/XCttcMzxktf7F1G4zPs6M4VowBwX8S/B</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2+5/x4+BBhSaTe8d4/cbM5PGbunMG1tPe/9tLAU+XngAAAAAOgAAAAAIAACAAAAC+UJcbuj3K2rusHKMrnzGo2D+Op+fQJfq+GhuIuxvwMiAAAACfNJ5rtqVA71XSEWOSU2S/Sv/zm6En11lKBATu7l0wLkAAAAAOjv+R5Yt8VZHuDsiJhCK0qMDgWE3YpdFu2lli1Qq9SgAsUDM9Amyali3R6KMsioJCUdQAkWjlWuZNO9Tn5yoE</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C453B7E2-D01C-435C-B3E2-618EBE0FD371}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDB.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVzvFHR5RUOc7nZDXxInmYU7zGxvJENUc4SaQLpZl7PwAAAAAOgAAAAAIAACAAAAAUQ20E8ZJLReRpgC3xl7aanfpBwryv9VTPN9RFQrnIvyAAAADXD0igt4Greor21IEWQvBw49Hq9NYLLXrqUmJpAfXDLkAAAAD/xjCp15P2nwoLvokABcqNAm0s2zLVGJThc+ghr8VWrFQSjAKD71AoU0badRH5MIKUmdAnO69ai9mpesF3FSDy</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{08F681C3-DA7D-4C4D-B647-500A0220559A}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDW.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACrN1xRCdyWmyfWXu1BzGRgVw/U8uiPqETcYNChCfY9qQAAAAAOgAAAAAIAACAAAADsKYtgPCkewjsLraTen9vh/XaQP0Pz3S0QVXzPvWayASAAAADBYwBcoePSXV8YiJeNtkH7hgQh36JCxCqsEQIK1DlWP0AAAAD/OFQURkNLGfLcwrZYRB0xlxdfnX1bjYXlt/2RZSu4cKIcOZPEZVR4a5kJn7pO0q0zhlxZ/3wmQhS3fg5FZDrx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -127,8 +157,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimCustomers\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -233,7 +263,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[.customers]</property>
+                  name="OpenRowset">[dbo].[customers]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -268,8 +298,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimCustomers\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -410,7 +440,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       name="customerNumber" />
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[customerName]"
@@ -454,8 +484,7 @@
                       name="state" />
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="i4"
                       name="postalCode" />
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[country]"
@@ -464,7 +493,7 @@
                       name="country" />
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[salesRepEmployeeNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       name="salesRepEmployeeNumber" />
                     <externalMetadataColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[creditLimit]"
@@ -479,7 +508,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customerNumber]"
                       name="customerNumber" />
                     <outputColumn
@@ -532,8 +561,7 @@
                       name="state" />
                     <outputColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="i4"
                       lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[postalCode]"
                       name="postalCode" />
                     <outputColumn
@@ -544,7 +572,7 @@
                       name="country" />
                     <outputColumn
                       refId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       lineageId="Package\Load DimCustomers\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[salesRepEmployeeNumber]"
                       name="salesRepEmployeeNumber" />
                     <outputColumn

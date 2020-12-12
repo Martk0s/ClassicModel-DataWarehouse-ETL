@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DimProducts"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{F9AD0928-18AA-48E6-8128-A639ABBC1C2E}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{31543217-35F8-4532-AAE5-057E29B30FC3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,37 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACpG1QC/3ZJE22aUz4diVrLNGzDXdTLsnejx2pLlkeh2QAAAAAOgAAAAAIAACAAAAAXZsyxCJ52nEF1UmSab+LiJGUz2Nj3gGt9vA8788SdsyAAAABi+yZCkZBL7x83ICKCnw6HBEfqrEhzPz8hcKWeNwVEcUAAAABm7optmZs4JCoaNRgPkGhrUQLqZjJPV+G9es13Z3an5VTImEj6Tc2W9J+RU4ZQNaT2aGxn3B8vjNwc/4ubv7fD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAgtzDuoglTFUe3U/KFdgsJs1lztFvpG3G5jSpcxnCkoAAAAAAOgAAAAAIAACAAAADdXFrbd2I0OFOHo1ol+GQWSfsOGhFsUzADrknparV/aiAAAABLdMc8SW6xAdj8rFiwStCT9d79yszv8uHyuQJUSlwq1kAAAABtavyLhpqOYe5sJNWsu8g0qQEgbnLVOQnJNZaYf9jK+h8WeGqznkwQdlJYvmE7pogKGStddjCp/iMX0IlsOHn+</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7D928B59-E693-4FF0-ABE3-E2E27F9575E2}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDB.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAARoXZn9fbaKv0O3cVoMVdcOaQEZDvyFJP5+XC9hUH8RQAAAAAOgAAAAAIAACAAAABbO5DF3qtsybb/HsWakGVBkoi2ak0qgV590wnpspzpEyAAAAAWkph3H96XB1IY72qXolalNyXhwog4kTbS1maID57fPUAAAAAAQTtmyTVIE6oJSxeznoR9Zp0vCevD/7eHUnhycn4pWJcUeZ0trPCDOtPzTb8VQLQtTvmNGXnNOfGGlvnc1xCa</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{61EC82AC-4D8C-4662-B9BA-FD36C7E3FBCB}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDW.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD0DIBS334czC7cquAVNuX2i+rylftGgT+rHe0WhdxeKQAAAAAOgAAAAAIAACAAAACY0CDXbCnUBd2Zft37UhVia7IBWXJwAQWXhWIDj1BzZiAAAABv5p90Cts2aGYmLe6Hjuj9o2qicANvvAinduq21n14AEAAAACrvHdvS8pB7yK67/cMar9zAgi+eZ2cQFjqpn9goKHzUuTk4KsQLrkrmpFB/sMuGMpZiHkPD+jxDzrkAjt+7E3v</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -107,8 +137,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimProducts\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -123,7 +153,7 @@
                     <inputColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productCode]"
                       cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="productCode"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productCode]"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productCode]" />
@@ -137,14 +167,14 @@
                     <inputColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productLine]"
                       cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="productLine"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productLine]"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productLine]" />
                     <inputColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[productScale]"
                       cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="productScale"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productScale]"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productScale]" />
@@ -167,7 +197,7 @@
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productCode]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productCode" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productName]"
@@ -177,12 +207,12 @@
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productLine]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productLine" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productScale]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productScale" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[productVendor]"
@@ -237,7 +267,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[.products]</property>
+                  name="OpenRowset">[dbo].[products]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -272,8 +302,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimProducts\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -288,7 +318,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productCode]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productCode]"
                       name="productCode"
                       truncationRowDisposition="FailComponent" />
@@ -308,7 +338,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productLine]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productLine]"
                       name="productLine"
                       truncationRowDisposition="FailComponent" />
@@ -318,7 +348,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productScale]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[productScale]"
                       name="productScale"
                       truncationRowDisposition="FailComponent" />
@@ -343,7 +373,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantityInStock]"
-                      dataType="r8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantityInStock]"
@@ -374,7 +404,7 @@
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productCode]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productCode" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productName]"
@@ -384,12 +414,12 @@
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productLine]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productLine" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productScale]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="productScale" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[productVendor]"
@@ -402,7 +432,7 @@
                       name="productDescription" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantityInStock]"
-                      dataType="r8"
+                      dataType="i4"
                       name="quantityInStock" />
                     <externalMetadataColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[buyPrice]"
@@ -422,7 +452,7 @@
                     <outputColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productCode]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productCode]"
                       name="productCode" />
                     <outputColumn
@@ -434,13 +464,13 @@
                     <outputColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productLine]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productLine]"
                       name="productLine" />
                     <outputColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productScale]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[productScale]"
                       name="productScale" />
                     <outputColumn
@@ -456,7 +486,7 @@
                       name="productDescription" />
                     <outputColumn
                       refId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantityInStock]"
-                      dataType="r8"
+                      dataType="i4"
                       lineageId="Package\Load DimProducts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantityInStock]"
                       name="quantityInStock" />
                     <outputColumn
@@ -523,39 +553,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Load DimProducts\OLE DB Destination"
-          TopLeft="52.5,128.5" />
-        <NodeLayout
           Size="157,42"
           Id="Package\Load DimProducts\OLE DB Source"
-          TopLeft="0.5,0.5" />
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load DimProducts\OLE DB Destination"
+          TopLeft="50.5,119.5" />
         <EdgeLayout
           Id="Package\Load DimProducts.Paths[OLE DB Source Output]"
-          TopLeft="79,42.5">
+          TopLeft="84,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62,86"
+              EndConnector="55,72"
               Start="0,0"
-              End="62,78.5">
+              End="55,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39" />
+                    End="0,32" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
                   <mssgle:LineSegment
-                    End="58,43" />
+                    End="51,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="58,43"
-                    Point2="62,43"
-                    Point3="62,47" />
+                    Point1="51,36"
+                    Point2="55,36"
+                    Point3="55,40" />
                   <mssgle:LineSegment
-                    End="62,78.5" />
+                    End="55,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -568,7 +598,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimProducts\OLE DB Destination">
+    design-time-name="Package\Load DimProducts\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -581,7 +611,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimProducts\OLE DB Source">
+    design-time-name="Package\Load DimProducts\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

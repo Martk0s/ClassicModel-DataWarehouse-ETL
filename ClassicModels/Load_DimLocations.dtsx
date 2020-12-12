@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DimLocations"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{0BD26231-C86B-4200-B2AD-8C7A39FC8914}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{0B48ADF8-CB3D-4D57-9872-20B704468683}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,37 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACivPHIpjPBso+QMxizPg0AKI4MmIPm8kkE2+35xXOcNQAAAAAOgAAAAAIAACAAAABuoCXnppVcbCaXIxXSBUmRJu40Wbhve1dB3rA380Y1DiAAAAD2gKUAgzW+sKXM/TGr+EuEZR14r/psZoe2BXgFP5KovUAAAABfN4CqvXIjhOce9rr2Ulx/fSWvI/G9bruZfWgTHvv7uBCSbjE5BiSnhp4zfcMejQR54LTuoLkUL79LJ8HvFrc/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB7p+5nhwYBJ4YlfB0Z4qRaxiFV4P/jJL+8DHB3v4pY6wAAAAAOgAAAAAIAACAAAAD9nIGnYzTGn7vdpV6bLlJupA2JN7MDDJ5Wu746qAl5CiAAAABKf3ZAyva4+87knA9ZU+EnDaPnt2YV/Efv7e9YyGe5vUAAAADRn6pfWgJC7G1AfLh09FiCHmAmP22ByJC0xX0OpBWbOG914mHMRp8w+jsonNuRF9nzWwr+/qj2TtbRpz9I20lg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7F9B269C-07EF-4809-B268-87B94C5786F5}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDB.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADmEFXe420zgGMe9vpS63sYdy+z/5WnwIKtSWCFae/ceQAAAAAOgAAAAAIAACAAAAAE7PT7Ep7HB/TgucFLivcHoTdtXyO6RhZYlIlP3AAdqiAAAADumtUBaTvAmCAq0qGlbEX9xuokplrC/sxZhfAkDVLPbEAAAAAHxVsMovHUhnKVu6JVeGPDSG/zUOap1RG5jWxE5oFj17cR2FX3ts7amEIndZX5kgTBABaNBw7O297pMI7zPO3/</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{55656FF7-7710-4172-B10E-A64D5FE869A2}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDW.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+PksptGVTxgNxyYF2/Jn5yWN4xXKO2MCAirdhDrqsjgAAAAAOgAAAAAIAACAAAACIC1QNoCn35sxOTiDVZVhEEBpz275gJX2L3rRERp64EiAAAADuRGPiI372Bn02493wKk3tWouAl8uz/AaTlmLlvX2AXUAAAAB9fQlhb7BujKRsEqgUDAmcRDMrMaLk3V8yq6aBYuRwOxVhu1jkoQ3IMt6VMFogULFHWpgjstsfHSo8inYGKn7V</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -107,8 +137,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimLocations\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -201,7 +231,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[.country_continent]</property>
+                  name="OpenRowset">[dbo].[country_continent]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -236,8 +266,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimLocations\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

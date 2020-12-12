@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load_DimEmployees"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7F94ED19-5E34-48BA-B3C7-F9489E6664B8}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{81AA64F5-EC07-4DF1-89BA-D4B3980027F0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,52 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmlM5cxRM96s+uYaEkgtzasCapsR2+YN5o5GGSD9suAwAAAAAOgAAAAAIAACAAAAAYUebEHdId4/Lw4wF/D45/EJEu5z90AB9Ex9LjJnzwHyAAAACPr3YFYiDL8HVkTLYuPP7SZKXNDnMx0JnsV9pZUKS+qUAAAACK4+PvEYa03xrUCOWt1yvPykmdCG8Ug8rbM49NO7QHV2qER7bmoxRTz7C1IMtj3Tn6iLg1CfD8DxFNgAZ3F2gP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADzqITwCDc1mHq/y8WcYmZzCX+X6ZZrGgHSXEgLzc9fQAAAAAOgAAAAAIAACAAAACwy9v+uXyWHdf/VGDQUjjz9n0cwIICcUyGroNFOxpMKyAAAABJoQoIXOa89bPOQJ8zYOt8epRlalSmSmvIDXWQSPRAQkAAAADQgowMOxhv3c+I6mqHZCrK9+ZkB2J/tKqyXMz8dyW/Q2oCvAK5KLdupSKJsnGRhYSFTRe7gaH5BX2vKubFtmI/</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2A3F6808-C090-49A9-9FBF-3743A6ABB0DE}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDB.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQsCQHSunlKjs0t8zc8t+vCag0QpVe7LOKaGYtn1CzuwAAAAAOgAAAAAIAACAAAACPNw28GgBIVtxY/GKAvWrRe8RqmREYGx/IwJE4L0GrYyAAAAB/ykCY8+6wVr7smExDmC/dXZ1iuM0pR7NH5C3Gz74QwkAAAAA8BjStRGT/hZufD/MvbOGbAE7RPcDdmYYdyAhne5m9FR3WyRKzsK9Bw3z0dDwCyRHquFzCl2B6t6W2yUWXU6Qu</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{982C89B6-A23B-4995-8FC0-8E84CFF64E97}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDB.std2 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAwpgJp322rui/Pyv9vNFb6KGYv0bPaEXnKaPGRnDREjQAAAAAOgAAAAAIAACAAAABKZFwjnis1cLCSodm5m/EI867qF3Us2h9QQPGsBANTPCAAAAAcTDPAlgcS61wahejxZX5ZnxC6+boqQOPQS2gOzOw7y0AAAACJTbKN3j82LFRgAFToONPs2UihApIGg91+GaSUgMnbgiHWiOY+rSA/zc/HXniZd04ufV4T7Z0DayKBex+l6UEF</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F021EFE0-BC5B-45C4-B9EC-ACED139C890E}"
+      DTS:ObjectName="10.0.15.15.ClassicModelsDW.std2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.15.15;User ID=std2;Initial Catalog=ClassicModelsDW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0vml40w+e0ii3Iv7aJGl7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADT7tV8TkyXvV0EVp8EJGyngVAznjoKuzbBWIAHRjqVywAAAAAOgAAAAAIAACAAAACDK4lYOxIrRYY3wCgOvnmbL9YiBLthBoawTbYcWls5LCAAAACvTFu9R2uSh4EZSPg9NQ8mxRg/TY3IqH2j/A9CBBQCUUAAAAAhRV0B735wtKvrqAHRmVPuYs6RkZ6gbl2vGZWwstIYDSIHS3DkN20DyM4pweDzUurPr6M48nq+4u5B79Gcm9Y+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,7 +83,7 @@
       DTS:refId="Package\Load DimEmployees"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{E83DFFFD-5666-4856-9F06-C3A5946788DD}"
+      DTS:DTSID="{18F5F0D7-2AAA-4D33-9468-9782284CA3ED}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load DimEmployees"
@@ -107,8 +152,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimEmployees\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDW.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -122,7 +167,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[employeeNumber]"
-                      cachedDataType="r8"
+                      cachedDataType="i4"
                       cachedName="employeeNumber"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employeeNumber]"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[employeeNumber]" />
@@ -143,13 +188,13 @@
                     <inputColumn
                       refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[jobTitle]"
                       cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="jobTitle"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobTitle]"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobTitle]" />
                     <inputColumn
                       refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[reportsTo]"
-                      cachedDataType="r8"
+                      cachedDataType="i4"
                       cachedName="reportsTo"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reportTo]"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[reportsTo]" />
@@ -161,24 +206,24 @@
                       dataType="i4"
                       name="employeeNumber" />
                     <externalMetadataColumn
-                      refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lastName]"
-                      dataType="wstr"
-                      length="255"
-                      name="lastName" />
-                    <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[firstName]"
                       dataType="wstr"
                       length="255"
                       name="firstName" />
                     <externalMetadataColumn
-                      refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobTitle]"
+                      refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lastName]"
                       dataType="wstr"
                       length="255"
-                      name="jobTitle" />
+                      name="lastName" />
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reportTo]"
                       dataType="i4"
                       name="reportTo" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimEmployees\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[jobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="jobTitle" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -223,7 +268,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[.employees]</property>
+                  name="OpenRowset">[dbo].[employees]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -258,8 +303,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimEmployees\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModels.std2]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.15.15.ClassicModelsDB.std2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -270,7 +315,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[employeeNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[employeeNumber]"
@@ -319,17 +364,16 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[officeCode]"
-                      dataType="wstr"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[officeCode]"
-                      length="255"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[officeCode]"
                       name="officeCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[reportsTo]"
-                      dataType="r8"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[reportsTo]"
@@ -342,7 +386,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobTitle]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].Columns[jobTitle]"
                       name="jobTitle"
                       truncationRowDisposition="FailComponent" />
@@ -351,7 +395,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[employeeNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       name="employeeNumber" />
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lastName]"
@@ -375,17 +419,16 @@
                       name="email" />
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[officeCode]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="i4"
                       name="officeCode" />
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[reportsTo]"
-                      dataType="r8"
+                      dataType="i4"
                       name="reportsTo" />
                     <externalMetadataColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[jobTitle]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       name="jobTitle" />
                   </externalMetadataColumns>
                 </output>
@@ -396,7 +439,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[employeeNumber]"
-                      dataType="r8"
+                      dataType="i4"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[employeeNumber]"
                       name="employeeNumber" />
                     <outputColumn
@@ -425,19 +468,18 @@
                       name="email" />
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[officeCode]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="i4"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[officeCode]"
                       name="officeCode" />
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[reportsTo]"
-                      dataType="r8"
+                      dataType="i4"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[reportsTo]"
                       name="reportsTo" />
                     <outputColumn
                       refId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobTitle]"
                       dataType="wstr"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimEmployees\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[jobTitle]"
                       name="jobTitle" />
                     <outputColumn
@@ -494,39 +536,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Load DimEmployees\OLE DB Source"
-          TopLeft="0.5,0.5" />
-        <NodeLayout
           Size="177,42"
           Id="Package\Load DimEmployees\OLE DB Destination"
-          TopLeft="52.5,128.5" />
+          TopLeft="45.5,111.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Load DimEmployees\OLE DB Source"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\Load DimEmployees.Paths[OLE DB Source Output]"
-          TopLeft="79,42.5">
+          TopLeft="84,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62,86"
+              EndConnector="50,64"
               Start="0,0"
-              End="62,78.5">
+              End="50,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39" />
+                    End="0,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="4,32" />
                   <mssgle:LineSegment
-                    End="58,43" />
+                    End="46,32" />
                   <mssgle:CubicBezierSegment
-                    Point1="58,43"
-                    Point2="62,43"
-                    Point3="62,47" />
+                    Point1="46,32"
+                    Point2="50,32"
+                    Point3="50,36" />
                   <mssgle:LineSegment
-                    End="62,78.5" />
+                    End="50,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
